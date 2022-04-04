@@ -1,3 +1,5 @@
+plugins:
+  - jest
 env:
   browser: true
   es2021: true
@@ -9,3 +11,4 @@ parserOptions:
 rules: 
   no-console: 0
   import/extensions: 0
+  no-underscore-dangle: [2, { "allow": ["__filename", "__dirname"] }]
