@@ -2,10 +2,8 @@ This project contains a command which let to compare two files.
 ---------------------------------------------------------------
 
 [![hexlet-check](https://github.com/Kvazitropter/frontend-project-lvl2/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Kvazitropter/frontend-project-lvl2/actions/workflows/hexlet-check.yml)
- 
-[![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)]()
-
-[![Test Coverage](https://api.codeclimate.com/v1/badges/dfc50c2d88cd46d069c1/test_coverage)]()
+[![Maintainability](https://api.codeclimate.com/v1/badges/cfc9469cc7a8b6af5752/maintainability)](https://codeclimate.com/github/Kvazitropter/frontend-project-lvl2/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/cfc9469cc7a8b6af5752/test_coverage)](https://codeclimate.com/github/Kvazitropter/frontend-project-lvl2/test_coverage)
 
 ---------------------------------------------------------------
 
