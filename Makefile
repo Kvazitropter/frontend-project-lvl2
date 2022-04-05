@@ -1,7 +1,7 @@
 install:
 	npm ci
 test:
-	npx jest --bail
+	npm test
 test-coverage:
 	npm test -- --coverage --coverageProvider=v8
 publish:
