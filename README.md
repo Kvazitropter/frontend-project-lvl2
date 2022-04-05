@@ -1,4 +1,4 @@
-This project contains a command which let to compare two files.
+This project contains a command which compares two files.
 ---------------------------------------------------------------
 
 [![hexlet-check](https://github.com/Kvazitropter/frontend-project-lvl2/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Kvazitropter/frontend-project-lvl2/actions/workflows/hexlet-check.yml)
