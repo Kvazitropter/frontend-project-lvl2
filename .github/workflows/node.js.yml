@@ -30,7 +30,7 @@ jobs:
     - run: npm run build --if-present
     - run: npm test
     - name: Test & publish code coverage
-      uses: paambaati/codeclimate-action@v3
+      uses: paambaati/codeclimate-action@v3.0.0
       env: 
         CODECLIMATE_ID: ${{ secrets.CODECLIMATE_ID }}
       with:
