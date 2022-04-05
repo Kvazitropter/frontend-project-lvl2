@@ -1,5 +1,5 @@
-install:
-	npm ci
+install: install-deps
+	npx simple-git-hooks
 test:
 	npx jest --bail
 test-coverage:
