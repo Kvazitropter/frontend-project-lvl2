@@ -1,10 +1,9 @@
-import { readFileSync } from 'fs';
+import parser from './parsers.js';
 import _ from 'lodash';
-import path from 'path';
 
 export default (filepath1, filepath2) => {
-  const file1 = JSON.parse(readFileSync(path.resolve(filepath1), 'utf-8'));
-  const file2 = JSON.parse(readFileSync(path.resolve(filepath2), 'utf-8'));
+  const file1 = parser(filepath1);
+  const file2 = parser(filepath2);
   const arrOfEntries1 = Object.entries(file1);
   const arrOfKeys1 = Object.keys(file1);
   const arrOfEntries2 = Object.entries(file2);
