@@ -1,5 +1,5 @@
 install:
-	npx simple-git-hooks
+	npm ci
 test:
 	npx jest --bail
 test-coverage:
