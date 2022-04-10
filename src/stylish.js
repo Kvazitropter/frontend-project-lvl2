@@ -1,7 +1,7 @@
 export default (diff) => {
   if (diff.length === 0) {
     return '{}';
-  };
+  }
   const iter = (arr, depth) => {
     const whSpaceForKey = ' '.repeat(2 * depth);
     const whSpaceForBracket = depth > 1 ? ' '.repeat(2 * (depth - 1)) : '';

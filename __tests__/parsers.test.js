@@ -7,30 +7,30 @@ const __dirname = path.dirname(__filename);
 const getFilepath = (filename) => path.join(__dirname, '..', '__fixtures__', filename);
 
 const expected = {
-  "common": {
-    "setting1": "Value 1",
-    "setting2": 200,
-    "setting3": true,
-    "setting6": {
-      "key": "value",
-      "doge": {
-        "wow": ""
-      }
-    }
+  common: {
+    setting1: 'Value 1',
+    setting2: 200,
+    setting3: true,
+    setting6: {
+      key: 'value',
+      doge: {
+        wow: '',
+      },
+    },
   },
-  "group1": {
-    "baz": "bas",
-    "foo": "bar",
-    "nest": {
-      "key": "value"
-    }
+  group1: {
+    baz: 'bas',
+    foo: 'bar',
+    nest: {
+      key: 'value',
+    },
   },
-  "group2": {
-    "abc": 12345,
-    "deep": {
-      "id": 45
-    }
-  }
+  group2: {
+    abc: 12345,
+    deep: {
+      id: 45,
+    },
+  },
 };
 
 test('parser test', () => {
