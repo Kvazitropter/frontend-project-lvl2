@@ -9,10 +9,6 @@ This project contains a command which compares two files.
 
 ---------------------------------------------------------------
 
-### gendiff command with stylish output format:
-[![asciicast](https://asciinema.org/a/P0LNxxSYW8dK65axEm1HRBHqU.svg)](https://asciinema.org/a/P0LNxxSYW8dK65axEm1HRBHqU)
-
-### gendiff command with plain output format (default):
-[![asciicast](https://asciinema.org/a/3dqYTQprBy0OfgmLHkF7R70XS.svg)](https://asciinema.org/a/3dqYTQprBy0OfgmLHkF7R70XS)
+[![asciicast](https://asciinema.org/a/dmcobAj7Ebx2thzgAvG2yKZMf.svg)](https://asciinema.org/a/dmcobAj7Ebx2thzgAvG2yKZMf)
 
 ----------------------------------------------------------------

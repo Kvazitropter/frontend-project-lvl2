@@ -9,7 +9,7 @@ program
   .version('0.0.1', '-V, --version', 'output the version number')
   .description('Compares two configuration files and shows a difference.')
   .helpOption('-h, --help', 'output usage information')
-  .option('-f, --format <type>', 'output format', 'plain')
+  .option('-f, --format <type>', 'output format', 'stylish')
   .argument('<filepath1>', 'path to first file')
   .argument('<filepath2>', 'path to second file')
   .action((filepath1, filepath2) => {
