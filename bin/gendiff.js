@@ -9,12 +9,14 @@ program
   .version('0.0.1', '-V, --version', 'output the version number')
   .description('Compares two configuration files and shows a difference.')
   .helpOption('-h, --help', 'output usage information')
-  .option('-f, --format <type>', 'output format')
+  .option('-f, --format <type>', 'output format', 'plain')
   .argument('<filepath1>', 'path to first file')
   .argument('<filepath2>', 'path to second file')
   .action((filepath1, filepath2) => {
+    const formatName = program.opts().format;
     const absPath1 = path.join(process.cwd(), filepath1);
     const absPath2 = path.join(process.cwd(), filepath2);
-    console.log(genDiff(absPath1, absPath2));
+    console.log(genDiff(absPath1, absPath2, formatName));
   });
+
 program.parse();

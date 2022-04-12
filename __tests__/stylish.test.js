@@ -1,4 +1,4 @@
-import stylish from '../src/stylish';
+import stylish from '../src/formatters/stylish';
 
 const diff1 = [
   [' ', 'key1', [

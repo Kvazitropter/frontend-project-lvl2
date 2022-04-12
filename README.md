@@ -9,10 +9,10 @@ This project contains a command which compares two files.
 
 ---------------------------------------------------------------
 
-### Work of gendiff command with json-files:
-[![asciicast](https://asciinema.org/a/gbGPCNfSt7GAf7UGuKv4jLjFw.svg)](https://asciinema.org/a/gbGPCNfSt7GAf7UGuKv4jLjFw)
+### gendiff command with stylish output format:
+[![asciicast](https://asciinema.org/a/P0LNxxSYW8dK65axEm1HRBHqU.svg)](https://asciinema.org/a/P0LNxxSYW8dK65axEm1HRBHqU)
 
-### Work of gendiff command with yaml-files:
-[![asciicast](https://asciinema.org/a/SEWAABODSDxndWZx89NW3f1GT.svg)](https://asciinema.org/a/SEWAABODSDxndWZx89NW3f1GT)
+### gendiff command with plain output format (default):
+[![asciicast](https://asciinema.org/a/3dqYTQprBy0OfgmLHkF7R70XS.svg)](https://asciinema.org/a/3dqYTQprBy0OfgmLHkF7R70XS)
 
 ----------------------------------------------------------------

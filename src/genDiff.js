@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import parser from './parsers.js';
-import stylish from './stylish.js';
+import chooseFormat from './formatters/index.js';
 
 const signs = [' ', '-', '+'];
 const [space, minus, plus] = signs;
@@ -24,7 +24,8 @@ const addSpace = (arr) => {
   return withAddedSpace;
 };
 
-export default (filepath1, filepath2) => {
+export default (filepath1, filepath2, format) => {
+  const formatter = chooseFormat(format);
   const file1 = parser(filepath1);
   const file2 = parser(filepath2);
   const arrOfEntries1 = objToArr(file1);
@@ -77,5 +78,5 @@ export default (filepath1, filepath2) => {
 
   const allWithSignSorted = callback(arrOfEntries1, arrOfEntries2);
 
-  return stylish(allWithSignSorted);
+  return formatter(allWithSignSorted);
 };
