@@ -9,6 +9,20 @@ This project contains a command which compares two files.
 
 ---------------------------------------------------------------
 
-[![asciicast](https://asciinema.org/a/dmcobAj7Ebx2thzgAvG2yKZMf.svg)](https://asciinema.org/a/dmcobAj7Ebx2thzgAvG2yKZMf)
+### Usage information:
+
+[![asciicast](https://asciinema.org/a/3cC2aVNROoDwF91rVYbDvooFz.svg)](https://asciinema.org/a/3cC2aVNROoDwF91rVYbDvooFz)
+
+### Default (stylish) output format:
+
+[![asciicast](https://asciinema.org/a/SEWAABODSDxndWZx89NW3f1GT.svg)](https://asciinema.org/a/SEWAABODSDxndWZx89NW3f1GT)
+
+### plain output format:
+
+[![asciicast](https://asciinema.org/a/UTHrjOwvqOJJgAVlDfbzHEzPR.svg)](https://asciinema.org/a/UTHrjOwvqOJJgAVlDfbzHEzPR)
+
+### json output format:
+
+[![asciicast](https://asciinema.org/a/sM2ATMSuNi33WfmfGVQSQOEUb.svg)](https://asciinema.org/a/sM2ATMSuNi33WfmfGVQSQOEUb)
 
 ----------------------------------------------------------------
