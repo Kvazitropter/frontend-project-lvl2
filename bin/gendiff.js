@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 import { Command } from 'commander';
-import path from 'path';
 import genDiff from '../src/genDiff.js';
 
 const program = new Command();
@@ -14,9 +13,7 @@ program
   .argument('<filepath2>', 'path to second file')
   .action((filepath1, filepath2) => {
     const formatName = program.opts().format;
-    const absPath1 = path.join(process.cwd(), filepath1);
-    const absPath2 = path.join(process.cwd(), filepath2);
-    console.log(genDiff(absPath1, absPath2, formatName));
+    console.log(genDiff(filepath1, filepath2, formatName));
   });
 
 program.parse();

@@ -4,7 +4,7 @@ import yaml from 'js-yaml';
 
 export default (filepath) => {
   const extension = path.extname(filepath);
-  const file = readFileSync(path.resolve(filepath), 'utf-8');
+  const file = readFileSync(filepath, 'utf-8');
   switch (extension) {
     case '.json':
       return JSON.parse(file);
