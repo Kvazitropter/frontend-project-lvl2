@@ -7,6 +7,10 @@
   "bin": {
     "gendiff": "bin/gendiff.js"
   },
+  "moduleDirectories": [
+    "node_modules",
+    "src"
+  ],
   "scripts": {
     "test": "jest"
   },
