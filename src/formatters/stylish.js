@@ -5,7 +5,7 @@ export default (diff) => {
     return '{}';
   }
   const iter = (arr, depth) => {
-    const hasChildren = (value) => (_.isArray(value) ? iter(value, depth + 1) : value);
+    const hasChildren = (value) => (_.isArray(value) ? iter(value, depth + 2) : value);
     const whSpaceForKey = ' '.repeat(2 * depth);
     const whSpaceForBracket = depth > 1 ? ' '.repeat(2 * (depth - 1)) : '';
     const allWithSign = arr.reduce((acc, { name, condition, value }) => {
