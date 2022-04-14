@@ -3,7 +3,7 @@
   "type": "module",
   "version": "1.0.0",
   "description": "",
-  "main": "genDiff.js",
+  "main": "src/genDiff.js",
   "bin": {
     "gendiff": "bin/gendiff.js"
   },
