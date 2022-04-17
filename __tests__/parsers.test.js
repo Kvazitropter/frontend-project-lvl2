@@ -1,10 +1,15 @@
 import { fileURLToPath } from 'url';
+import { readFileSync } from 'fs';
 import path from 'path';
 import parser from '../src/parsers.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const getFilepath = (filename) => path.join(__dirname, '..', '__fixtures__', filename);
+const getData = (filepath) => readFileSync(filepath, 'utf-8');
+const file1 = getData(getFilepath('file1.json'));
+const file2 = getData(getFilepath('file1.yaml'));
+const file3 = getData(getFilepath('file1.yml'));
 
 const expected = {
   common: {
@@ -34,9 +39,9 @@ const expected = {
 };
 
 test('parser test', () => {
-  const actual1 = parser(getFilepath('file1.json'));
-  const actual2 = parser(getFilepath('file1.yaml'));
-  const actual3 = parser(getFilepath('file1.yml'));
+  const actual1 = parser(file1, 'json');
+  const actual2 = parser(file2, 'yaml');
+  const actual3 = parser(file3, 'yml');
   expect(actual1).toEqual(expected);
   expect(actual2).toEqual(expected);
   expect(actual3).toEqual(expected);
