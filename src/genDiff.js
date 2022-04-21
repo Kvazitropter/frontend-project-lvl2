@@ -4,16 +4,13 @@ import getFormatter from './formatters/index.js';
 import parser from './parsers.js';
 import makeTree from './makeTree.js';
 
-const getAbsPath = (filepath) => {
-  const currentPath = process.cwd();
-  return path.resolve(currentPath, filepath);
-};
+const getAbsPath = (filepath) => path.resolve(process.cwd(), filepath);
 
 const getData = (filepath) => readFileSync(filepath, 'utf-8');
 
 const getExtension = (filepath) => path.extname(filepath).slice(1);
 
-const genDiff = (filepath1, filepath2, formatName) => {
+const genDiff = (filepath1, filepath2, formatName = 'stylish') => {
   const file1 = getData(getAbsPath(filepath1));
   const file2 = getData(getAbsPath(filepath2));
   const ext1 = getExtension(filepath1);

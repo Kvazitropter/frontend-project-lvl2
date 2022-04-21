@@ -8,7 +8,9 @@ export default (formatName) => {
       return plain;
     case 'json':
       return json;
-    default:
+    case 'stylish':
       return stylish;
+    default:
+      throw new Error('unsupported output format');
   }
 };
