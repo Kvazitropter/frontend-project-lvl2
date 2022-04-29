@@ -15,12 +15,8 @@ const extension = ['yml', 'yaml', 'json'];
 test.each(extension)('compare files', (ext) => {
   const filepath1 = getFilepath(`file1.${ext}`);
   const filepath2 = getFilepath(`file2.${ext}`);
-  const actual1 = genDiff(filepath1, filepath2, 'stylish');
-  const actual2 = genDiff(filepath1, filepath2, 'plain');
-  const actual3 = genDiff(filepath1, filepath2, 'json');
-  const actual4 = genDiff(filepath1, filepath2);
-  expect(actual1).toEqual(expected1);
-  expect(actual2).toEqual(expected2);
-  expect(actual3).toEqual(expected3);
-  expect(actual4).toEqual(expected1);
+  expect(genDiff(filepath1, filepath2, 'stylish')).toEqual(expected1);
+  expect(genDiff(filepath1, filepath2, 'plain')).toEqual(expected2);
+  expect(genDiff(filepath1, filepath2, 'json')).toEqual(expected3);
+  expect(genDiff(filepath1, filepath2)).toEqual(expected1);
 });
