@@ -1,4 +1,4 @@
-#Differrence calculator
+# Differrence calculator
 
 This project contains a command which compares two files.
 
