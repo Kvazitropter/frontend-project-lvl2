@@ -4,6 +4,11 @@ This project contains a command which compares two files.
 
 ---------------------------------------------------------------
 
+It is study project. The npm-package wasn't published, so the installation insruction below won't work.
+If you want to try this, use git clone https://github.com/Kvazitropter/frontend-project-lvl2.git
+
+---------------------------------------------------------------
+
 ### Installation:
 
 1. npm install @hexlet/code
