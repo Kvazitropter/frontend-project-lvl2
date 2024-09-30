@@ -1,10 +1,20 @@
-import path from 'path';
-import getData from './getData.js';
-import parseData from './parseData.js';
+import _ from 'lodash';
 
-export default (filepath1, filepath2, format) => {
-  const extension1 = path.extname(filepath1).slice(1);
-  const extension2 = path.extname(filepath2).slice(1);
-  const data1 = parseData(getData(filepath1), extension1);
-  const data2 = parseData(getData(filepath2), extension2);
+export default (data1, data2) => {
+  const keys1 = Object.keys(data1);
+  const keys2 = Object.keys(data2);
+  const allKeysSorted = _.union(keys1, keys2).sort();
+
+  return allKeysSorted.reduce((result, key) => {
+    if (!_.has(data1, key)) {
+      result.push({ key, value: data2[key], status: 'added' });
+    } else if (!_.has(data2, key)) {
+      result.push({ key, value: data1[key], status: 'deleted' });
+    } else if (data1[key] === data2[key]) {
+      result.push({ key, value: data1[key], status: 'unchanged' });
+    } else {
+      result.push({ key, value: [data1[key], data2[key]], status: 'changed' });
+    }
+    return result;
+  }, []);
 };
