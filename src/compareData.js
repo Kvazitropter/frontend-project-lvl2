@@ -3,7 +3,7 @@ import _ from 'lodash';
 export default (data1, data2) => {
   const keys1 = Object.keys(data1);
   const keys2 = Object.keys(data2);
-  const allKeysSorted = _.union(keys1, keys2).sort();
+  const allKeysSorted = _.sortBy(_.union(keys1, keys2));
 
   return allKeysSorted.reduce((result, key) => {
     if (!_.has(data1, key)) {

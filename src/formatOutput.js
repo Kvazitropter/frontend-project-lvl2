@@ -12,18 +12,21 @@ const format1 = (data) => {
   const lines = data.reduce((acc, { key, value, status }) => {
     switch (status) {
       case 'changed':
-        acc.push(formatLine(key, value[0], 'added'));
-        acc.push(formatLine(key, value[1], 'deleted'));
-        break;
+        return [
+          ...acc,
+          formatLine(key, value[0], 'added'),
+          formatLine(key, value[1], 'deleted'),
+        ];
       case 'added':
       case 'deleted':
       case 'unchanged':
-        acc.push(formatLine(key, value, status));
-        break;
+        return [
+          ...acc,
+          formatLine(key, value, status),
+        ];
       default:
         throw new Error('unknown status of the file entry');
     }
-    return acc;
   }, []);
 
   return `{\n  ${lines.join('\n  ')}\n}`;
