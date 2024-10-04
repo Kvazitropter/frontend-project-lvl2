@@ -14,8 +14,8 @@ const format1 = (data) => {
       case 'changed':
         return [
           ...acc,
-          formatLine(key, value[0], 'added'),
-          formatLine(key, value[1], 'deleted'),
+          formatLine(key, value[0], 'deleted'),
+          formatLine(key, value[1], 'added'),
         ];
       case 'added':
       case 'deleted':
