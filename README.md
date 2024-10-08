@@ -23,8 +23,8 @@ Compares two configuration files and shows a difference.
 
 ---
 
-# Default format:
+# Stylish \(default\) format:
 
-[![asciicast](https://asciinema.org/a/678240.svg)](https://asciinema.org/a/678240)
+[![asciicast](https://asciinema.org/a/R6wR5wEgkZyP6w3FBqbk9VjcD.svg)](https://asciinema.org/a/R6wR5wEgkZyP6w3FBqbk9VjcD)
 
 ---
