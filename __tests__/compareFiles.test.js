@@ -11,18 +11,18 @@ const readFixtureFile = (filename, ...options) => fs.readFileSync(
   ...options,
 );
 
-let expected;
+let expectedStylish;
 const extensions = ['json', 'yml'];
 
 beforeAll(() => {
-  expected = readFixtureFile('resultStylish1.txt', 'utf8');
+  expectedStylish = readFixtureFile('resultStylish.txt', 'utf8');
 });
 
 describe('compareFiles test', () => {
-  test.each(extensions)('$extension files without nested values stylish format', (extension) => {
+  test.each(extensions)('supported extensions files stylish format', (extension) => {
     const filepath1 = getFixturePath(`file1.${extension}`);
     const filepath2 = getFixturePath(`file2.${extension}`);
-    const actual = compareFiles(filepath1, filepath2);
-    expect(actual).toBe(expected);
+    const actual = compareFiles(filepath1, filepath2, 'stylish');
+    expect(actual).toBe(expectedStylish);
   });
 });

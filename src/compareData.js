@@ -1,6 +1,6 @@
 import _ from 'lodash';
 
-export default (data1, data2) => {
+const compareData = (data1, data2) => {
   const keys1 = Object.keys(data1);
   const keys2 = Object.keys(data2);
   const allKeysSorted = _.sortBy(_.union(keys1, keys2));
@@ -12,9 +12,22 @@ export default (data1, data2) => {
       result.push({ key, value: data1[key], status: 'deleted' });
     } else if (data1[key] === data2[key]) {
       result.push({ key, value: data1[key], status: 'unchanged' });
+    } else if (_.isObject(data1[key]) && _.isObject(data2[key])) {
+      result.push({
+        key,
+        children: compareData(data1[key], data2[key]),
+        status: 'nested',
+      });
     } else {
-      result.push({ key, value: [data1[key], data2[key]], status: 'changed' });
+      result.push({
+        key,
+        oldValue: data1[key],
+        newValue: data2[key],
+        status: 'changed',
+      });
     }
     return result;
   }, []);
 };
+
+export default compareData;

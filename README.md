@@ -13,18 +13,38 @@ Compares two configuration files and shows a difference.
 
 # Set up:
 
-- **git clone** git@github.com:Kvazitropter/frontend-project-lvl2.git
-- **make install**
+```
+git clone git@github.com:Kvazitropter/frontend-project-lvl2.git
+make install
+```
 
 ---
 
 # Usage:
-- **gendiff** \<filepath1\> \<filepath2\>
+
+```
+
+gendiff filepath1 filepath2 [-h] [-v] [-f]
+
+```
+
+```
+
+Required arguments:
+  filepath1  path to original file
+  filepath2  path to file that original will be compared to
+
+Optional arguments:
+  -h --help           show usage information
+  -V --version        show program's version number
+  -f --format [type]  choose output format (default: "stylish")
+
+```
 
 ---
 
 # Stylish \(default\) format:
 
-[![asciicast](https://asciinema.org/a/R6wR5wEgkZyP6w3FBqbk9VjcD.svg)](https://asciinema.org/a/R6wR5wEgkZyP6w3FBqbk9VjcD)
+[![asciicast](https://asciinema.org/a/DwqV7pequ9D0kaw1QtPFvII5S.svg)](https://asciinema.org/a/DwqV7pequ9D0kaw1QtPFvII5S)
 
 ---
