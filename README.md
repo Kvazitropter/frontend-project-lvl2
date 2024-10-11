@@ -51,4 +51,8 @@ Optional arguments:
 
 [![asciicast](https://asciinema.org/a/680508.svg)](https://asciinema.org/a/680508)
 
+# Json format:
+
+[![asciicast](https://asciinema.org/a/JaZtkvHMtIzpw1xHZUwf2DjQU.svg)](https://asciinema.org/a/JaZtkvHMtIzpw1xHZUwf2DjQU)
+
 ---

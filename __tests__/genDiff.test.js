@@ -12,21 +12,17 @@ const readFixtureFile = (filename, ...options) => fs.readFileSync(
 );
 
 const extensions = ['json', 'yml'];
-let expectedStylish;
-let expectedPlain;
-
-beforeAll(() => {
-  expectedStylish = readFixtureFile('resultStylish.txt', 'utf8');
-  expectedPlain = readFixtureFile('resultPlain.txt', 'utf8');
+const expectedResults = ['stylish', 'plain', 'json'].map((format) => {
+  const filename = `result${format[0].toUpperCase()}${format.slice(1)}.txt`;
+  const expected = readFixtureFile(filename, 'utf8');
+  return { format, expected };
 });
 
-describe('genDiff test', () => {
-  test.each(extensions)('supported extensions files', (extension) => {
+describe.each(expectedResults)('genDiff $format format', ({ format, expected }) => {
+  test.each(extensions)('compare %s files', (extension) => {
     const filepath1 = getFixturePath(`file1.${extension}`);
     const filepath2 = getFixturePath(`file2.${extension}`);
-    const actual1 = genDiff(filepath1, filepath2, 'stylish');
-    const actual2 = genDiff(filepath1, filepath2, 'plain');
-    expect(actual1).toBe(expectedStylish);
-    expect(actual2).toBe(expectedPlain);
+    const actual = genDiff(filepath1, filepath2, format);
+    expect(actual).toBe(expected);
   });
 });
