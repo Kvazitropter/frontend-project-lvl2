@@ -8,6 +8,6 @@ export default (data, extension) => {
     case 'yaml':
       return yaml.load(data);
     default:
-      throw new Error('unsupported extension');
+      throw new Error(`Unsupported extension: ${extension}`);
   }
 };
